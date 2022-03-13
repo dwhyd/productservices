@@ -1,6 +1,8 @@
 const mongoose = require("mongoose");
-const url = "mongodb://diki:1234@localhost:27017/latihan?authSource=admin";
-// const url ="mongodb+srv://diki:1234@belajarmongodbatlas.jwcyd.mongodb.net/sampleService?retryWrites=true&w=majority";
+const www= {usr: diki,
+pss:1234}
+//const url = "mongodb://diki:1234@localhost:27017/latihan?authSource=admin";
+const url =`mongodb+srv://${www.usr}:${www.pss}@belajarmongodbatlas.jwcyd.mongodb.net/sampleService?retryWrites=true&w=majority`;
 mongoose.connect(url, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
