@@ -9,13 +9,15 @@ routers.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, home));
 });
 routers.get("/gallery", (req, res) => {
-  const gambar = "public/penjualan.PNG";
-  res.download(path.join(__dirname, gambar), "gambar-utama.png");
+  //const gambar = "public/penjualan.PNG";
+  //res.download(path.join(__dirname, gambar), "gambar-utama.png");
+res.send(<h1>Gallery</h1>)
 });
 routers.get("/unduh", (req, res) => {
-  const penjualan = "/public/penjualan.PNG";
+ // const penjualan = "/public/penjualan.PNG";
 
-  res.download(path.join(__dirname, penjualan));
+  //res.download(path.join(__dirname, penjualan));
+res.send(<h1>Unduhan</h1>)
 });
 const upload = multer({ dest: "public" });
 routers.post("/upload", upload.single("file"), (req, res) => {
